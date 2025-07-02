@@ -106,3 +106,30 @@ typeof 123              → "number"
 
 // 📘 Read more: https://262.ecma-international.org/5.1/#sec-11.4.3
 // 📘 MDN Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+
+
+//******************************************************************
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//  Stack (Primitive), Heap (Non-Primitive)
+
+// Stack (Primitive)
+let myYoutubename = "Munishsingh";
+let anothoername = myYoutubename;
+anothoername = "Hitesh";
+
+console.log(myYoutubename);  // ✅ Munishsingh
+console.log(anothoername);   // ✅ Hitesh
+
+// Heap (Non-Primitive)
+let userOne = {
+    name: "username@nasdficom",
+    upi: "user@ybl"
+};
+
+let userTwo = userOne;       // 🧠 Both point to the same object
+
+userTwo.name = "hitesh@google.com"; // Changes both userOne & userTwo
+
+console.log(userOne.name); // ✅ hitesh@google.com
+console.log(userTwo.name); // ✅ hitesh@google.com
